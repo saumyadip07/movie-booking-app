@@ -45,12 +45,10 @@ const movieSchema = new mongoose.Schema(
       type: String,
       enum: ["G", "PG", "PG-13", "R", "NC-17"],
       default: "G",
-
     },
     rating: {
       type: Number,
       default: 0,
-     
     },
     duration: {
       type: String,
@@ -62,8 +60,8 @@ const movieSchema = new mongoose.Schema(
     },
     releaseStatus: {
       type: String,
-      enum: ["Archived", "Released", "Prebooking","Upcoming"],
-      default: "RELEASED",
+      enum: ["Archived", "Released", "Prebooking", "Upcoming"],
+      default: "Released",
       required: true,
     },
     poster: {
