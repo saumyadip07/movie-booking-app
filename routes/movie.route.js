@@ -12,18 +12,18 @@ import authCheck from "../middlewares/auth.middleware.js";
 const Router= express.Router();
 
 //create movie route
-Router.post("/mba/api/v1/movies",authCheck, validateCreateMovie, createMovie);
+Router.post("/mba/api/v1/movies", validateCreateMovie, createMovie);
 
 //delete movie route
-Router.delete("/mba/api/v1/movies/:id",authCheck, deleteMovie);
+Router.delete("/mba/api/v1/movies/:id",deleteMovie);
 
 //get single movie
-Router.get("/mba/api/v1/movies/:id",authCheck, getMovie);
+Router.get("/mba/api/v1/movies/:id",getMovie);
 
 //update movie route
-Router.put("/mba/api/v1/movies/:id",authCheck, updateMovie)
+Router.put("/mba/api/v1/movies/:id", updateMovie)
 
 //get all movies or search by name
-Router.get("/mba/api/v1/movies", authCheck,getAllMovies);
+Router.get("/mba/api/v1/movies", getAllMovies);
 
 export default Router;

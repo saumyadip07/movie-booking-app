@@ -19,19 +19,19 @@ import authCheck from "../middlewares/auth.middleware.js";
 const Router = express.Router();
 
 //create genre route
-Router.post("/mba/api/v1/genres", authCheck, validateCreateGenre, createGenre);
+Router.post("/mba/api/v1/genres",  validateCreateGenre, createGenre);
 
 //get single genre route
-Router.get("/mba/api/v1/genres/:id", authCheck, getGenre);
+Router.get("/mba/api/v1/genres/:id", getGenre);
 
 //get all genres route
-Router.get("/mba/api/v1/genres", authCheck, getAllGenres);
+Router.get("/mba/api/v1/genres",  getAllGenres);
 
 //update genre route
-Router.put("/mba/api/v1/genres/:id", authCheck, updateGenre);
+Router.put("/mba/api/v1/genres/:id",  updateGenre);
 
 // delete genre route
-Router.delete("/mba/api/v1/genres/:id", authCheck, deleteGenre);
+Router.delete("/mba/api/v1/genres/:id",  deleteGenre);
 
 export default Router;
 

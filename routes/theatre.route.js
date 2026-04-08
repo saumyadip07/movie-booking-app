@@ -18,21 +18,21 @@ Router.post("/mba/api/v1/theatres", authCheck,
 );
 
 //get theatre by id route
-Router.get("/mba/api/v1/theatres/:id",authCheck, getTheatre);
+Router.get("/mba/api/v1/theatres/:id", getTheatre);
 
 //get all theatres route
-Router.get("/mba/api/v1/theatres",authCheck, getAllTheatres);
+Router.get("/mba/api/v1/theatres", getAllTheatres);
 
 //update theatre route
-Router.put("/mba/api/v1/theatres/:id",authCheck,  updateTheatre);
+Router.put("/mba/api/v1/theatres/:id",  updateTheatre);
 
 //delete theatre route
-Router.delete("/mba/api/v1/theatres/:id", authCheck, deleteTheatre);
+Router.delete("/mba/api/v1/theatres/:id",  deleteTheatre);
 
 
 //add or delete movies in theatre
 Router.put("/mba/api/v1/theatres/:id/movies",
-  authCheck,
+
   validateUpdateMoviesInTheatre,
   updateMoviesInTheatre
 );
