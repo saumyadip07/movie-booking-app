@@ -10,7 +10,7 @@ const authCheck = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      return res.status(STATUS_CODES.UNAUTHORISED).json({ message: "Authorization header missing or malformed" });
+      return res.status(STATUS_CODES.UNAUTHORISED).json({ message: "Authentication failed" });
     }
 
     const token = authHeader.split(" ")[1];
