@@ -18,10 +18,10 @@ Router.post("/mba/api/v1/theatres", authCheck,
 );
 
 //get theatre by id route
-Router.get("/mba/api/v1/theatres/:id", getTheatre);
+Router.get("/mba/api/v1/theatres/:id",authCheck, getTheatre);
 
 //get all theatres route
-Router.get("/mba/api/v1/theatres", getAllTheatres);
+Router.get("/mba/api/v1/theatres",authCheck, getAllTheatres);
 
 //update theatre route
 Router.put("/mba/api/v1/theatres/:id",authCheck,  updateTheatre);

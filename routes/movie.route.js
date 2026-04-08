@@ -18,12 +18,12 @@ Router.post("/mba/api/v1/movies",authCheck, validateCreateMovie, createMovie);
 Router.delete("/mba/api/v1/movies/:id",authCheck, deleteMovie);
 
 //get single movie
-Router.get("/mba/api/v1/movies/:id", getMovie);
+Router.get("/mba/api/v1/movies/:id",authCheck, getMovie);
 
 //update movie route
 Router.put("/mba/api/v1/movies/:id",authCheck, updateMovie)
 
 //get all movies or search by name
-Router.get("/mba/api/v1/movies",getAllMovies)
+Router.get("/mba/api/v1/movies", authCheck,getAllMovies);
 
 export default Router;
